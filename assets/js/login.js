@@ -11,7 +11,7 @@ $(function () {
     })
     //   2.需求自定义layui 校验规则
     // 自定义验证规则
-    console.log(layui);
+    // console.log(layui);
     var form = layui.form;
     form.verify({
         // 密码规则

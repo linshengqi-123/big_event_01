@@ -10,6 +10,7 @@ $(function () {
 
             localStorage.removeItem("token")
             location.href = "/login.html";
+            // 关闭弹窗
             layer.close(index);
 
         });

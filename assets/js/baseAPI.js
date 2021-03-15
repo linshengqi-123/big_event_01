@@ -8,7 +8,7 @@ let baseURL = "http://api-breakingnews-web.itheima.net";
 // let baseURL = 'http://api-breakingnews-web.itheima.net';
 
 $.ajaxPrefilter(function (options) {
-    console.log(options);
+    // console.log(options);
     // 如果是index.html页面，不需要添加前缀 写死的
     if (options.url === 'http://127.0.0.1:5500/index.html') {
         return;
@@ -23,7 +23,7 @@ $.ajaxPrefilter(function (options) {
     }
 
     options.complete = function (res) {
-        console.log(res.responseJSON);
+        // console.log(res.responseJSON);
         let obj = res.responseJSON;
         if (obj.status == 1 && obj.message == "身份认证失败！") {
             // 清空本地token
