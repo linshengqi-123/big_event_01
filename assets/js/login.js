@@ -11,6 +11,7 @@ $(function () {
     })
     //   2.需求自定义layui 校验规则
     // 自定义验证规则
+    console.log(layui);
     var form = layui.form;
     form.verify({
         // 密码规则
@@ -23,12 +24,15 @@ $(function () {
             console.log($(".reg-box input[name=password]").val());
             console.log($(".reg-box input[name=repassword]").val());
 
+
             // 比较
             if (value != $(".reg-box input[name=password]").val()) {
                 return "两次输入的密码不一致"
             }
         }
+
     })
+
     //3. 注册功能
     var layer = layui.layer;
     $("#form_reg").on("submit", function (e) {
@@ -57,6 +61,7 @@ $(function () {
             }
         })
     })
+    // 登录功能
     $("#form_login").on("submit", function (e) {
         // 阻止表单提交
         e.preventDefault();
@@ -79,7 +84,9 @@ $(function () {
                 location.href = "/index.html";
 
             }
+
         })
+        console.log($(this));
     })
 
 
